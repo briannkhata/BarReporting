@@ -1,0 +1,44 @@
+﻿
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet box grey" style="border:1px solid #E5E5E5;">
+            <div class="portlet-title">
+                <div class="caption">
+                    @ViewBag.Title
+                </div>
+            </div>
+            <div class="portlet-body">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Expense Type</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var sdTotal = 0;
+                            var count = 0;
+                            foreach (var item in ViewBag.expenses)
+                            {
+                                sdTotal += item.Amount;
+                                <tr>
+                                    <td>@item.ExpenseTypeName</td>
+                                    <td>@string.Format("{0:C}", item.Amount).Trim('$')</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>@string.Format("{0:C}", sdTotal).Trim('$')</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

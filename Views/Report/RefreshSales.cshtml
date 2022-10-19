@@ -25,23 +25,44 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @{
+                            var spTotal = 0;
+                            var sdTotal = 0;
+                            var txTotal = 0;
+                            var dsTotal = 0;
 
-                        @foreach (var item in ViewBag.Sales)
-                        {
-                            <tr>
-                                <td>@item.ProductCode</td>
-                                <td>@item.ProductName</td>
-                                <td>@item.CategoryName</td>
-                                <td>@item.BrandName</td>
-                                <td>@string.Format("{0:C}", item.SellingPrice).Trim('$')</td>
-                                <td>@string.Format("{0:C}", item.Discount).Trim('$')</td>
-                                <td>@item.Qty</td>
-                                <td>@string.Format("{0:C}", item.TaxValue).Trim('$')</td>
-                                <td>@string.Format("{0:C}", item.SoldPrice).Trim('$')</td>
-                                <td>@item.DateSold.ToString("dd/M/yyyy")</td>
-                            </tr>
+                            foreach (var item in ViewBag.Sales)
+                            {
+                                spTotal += item.item.SellingPrice;
+                                sdTotal += item.item.SoldPrice;
+                                txTotal += item.item.TaxValue;
+                                dsTotal += item.item.Discount;
+
+                                <tr>
+                                    <td>@item.ProductCode</td>
+                                    <td>@item.ProductName</td>
+                                    <td>@item.CategoryName</td>
+                                    <td>@item.BrandName</td>
+                                    <td>@string.Format("{0:C}", item.SellingPrice).Trim('$')</td>
+                                    <td>@string.Format("{0:C}", item.Discount).Trim('$')</td>
+                                    <td>@item.Qty</td>
+                                    <td>@string.Format("{0:C}", item.TaxValue).Trim('$')</td>
+                                    <td>@string.Format("{0:C}", item.SoldPrice).Trim('$')</td>
+                                    <td>@item.DateSold.ToString("dd/M/yyyy")</td>
+                                </tr>
+                            }
                         }
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td>@string.Format("{0:C}", spTotal).Trim('$')</td>
+                            <td>@string.Format("{0:C}", dsTotal).Trim('$')</td>
+                            <td>@string.Format("{0:C}", txTotal).Trim('$')</td>
+                            <td>@string.Format("{0:C}", sdTotal).Trim('$')</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>

@@ -362,6 +362,8 @@
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\Report\FilterIncomes.cshtml" />
     <Content Include="Views\Report\FilterExpenses.cshtml" />
+    <Content Include="Views\Report\RefreshIncomes.cshtml" />
+    <Content Include="Views\Report\RefreshExpenses.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -90,11 +90,33 @@ namespace BiselaWeb.Controllers
             return View();
         }
 
+        public ActionResult RefreshIncomes()
+        {
+            int IncomeType = short.Parse(Request.Form["IncomeTypeId"]);
+            using (db = new BEntities())
+            {
+                ViewBag.Title = "Incomes  For | " + db.IncomeTypes.Where(x => x.IncomeTypeId == IncomeType).SingleOrDefault().IncomeTypeName;
+                ViewBag.incomes = db.vwIncomes.Where(x => x.IncomeTypeId == IncomeType).ToList();
+            }
+            return View();
+        }
+
         public ActionResult FilterExpenses()
         {
             using (db = new BEntities())
             {
                 ViewBag.expenseTypes = db.vwExpenseTypes.ToList();
+            }
+            return View();
+        }
+
+        public ActionResult RefreshExpenses()
+        {
+            int ExpenseType = short.Parse(Request.Form["ExpenseTypeId"]);
+            using (db = new BEntities())
+            {
+                ViewBag.Title = "Expenses  | " + db.ExpenseTypes.Where(x => x.ExpenseTypeId == ExpenseType).SingleOrDefault().ExpenseTypeName;
+                ViewBag.expenses = db.vwExpenses.Where(x => x.ExpenseTypeId == ExpenseType).ToList();
             }
             return View();
         }
