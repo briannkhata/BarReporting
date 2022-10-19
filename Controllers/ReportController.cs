@@ -82,5 +82,14 @@ namespace BiselaWeb.Controllers
             }
             return View();
         }
+
+        public ActionResult FilterIncomes()
+        {
+            using(db = new BEntities())
+            {
+                ViewBag.incomeTypes = db.vwIncomTypes.ToList();
+            }
+            return View();
+        }
     }
 }
