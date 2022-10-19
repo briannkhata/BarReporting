@@ -39,14 +39,53 @@ namespace BiselaWeb.Controllers
         {
             DateTime FromDate = DateTime.Parse(Request.Form["FromDate"]);
             DateTime ToDate = DateTime.Parse(Request.Form["ToDate"]);
+
             var SaleType = Request.Form["SaleType"];
-            var PaymentTypeId = Request.Form["PaymentTypeId"];
-            var UserId = Request.Form["UserId"];
+            int PaymentType = short.Parse(Request.Form["PaymentTypeId"]);
+            int User = short.Parse(Request.Form["UserId"]);
 
             ViewBag.Title = "Sales For | " + FromDate.ToString("dd/M/yyyy") + " To " + ToDate.ToString("dd/M/yyyy");
             using (db = new BEntities())
             {
-                ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate).ToList();
+                if (SaleType == "" && PaymentType.ToString() == null && User.ToString() == null)
+                {
+                    ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate).ToList();
+                }
+
+                if(SaleType != "")
+                {
+                    ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate && x.SaleType == SaleType).ToList();
+                }
+
+                if (String.IsNullOrEmpty(PaymentType.ToString()))
+                {
+                    ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate && x.PaymentTypeId == PaymentType).ToList();
+                }
+
+                if (User.ToString() != null)
+                {
+                    ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate && x.UserId == User).ToList();
+                }
+
+                if (SaleType != "" && PaymentType.ToString() !="")
+                {
+                    ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate && x.SaleType == SaleType && x.PaymentTypeId == PaymentType).ToList();
+                }
+
+                if (SaleType != "" && User.ToString() != "")
+                {
+                    ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate && x.SaleType == SaleType && x.UserId == User).ToList();
+                }
+
+                if (PaymentType.ToString() != "" && User.ToString() != "")
+                {
+                    ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate && x.PaymentTypeId == PaymentType && x.UserId == User).ToList();
+                }
+
+                if (PaymentType.ToString() != "" && User.ToString() != "" && SaleType !="")
+                {
+                    ViewBag.sales = db.vwSalesReports.Where(x => x.DateSold >= FromDate && x.DateSold <= ToDate && x.PaymentTypeId == PaymentType && x.UserId == User && x.SaleType == SaleType).ToList();
+                }
             }
             return View();
         }
