@@ -25,7 +25,7 @@ namespace BiselaWeb.Controllers
             return View();
         }
 
-        public ActionResult Sales()
+        public ActionResult FilterSales()
         {
             using (db = new BEntities())
             {
@@ -41,7 +41,7 @@ namespace BiselaWeb.Controllers
             return View();
         }
 
-        public ActionResult FilterSales()
+        public ActionResult RefreshSales()
         {
             DateTime FromDate = DateTime.Parse(Request.Form["FromDate"]);
             DateTime ToDate = DateTime.Parse(Request.Form["ToDate"]);

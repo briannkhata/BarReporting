@@ -353,9 +353,9 @@
     <Content Include="Views\Auth\Index.cshtml" />
     <Content Include="Views\Report\Vat.cshtml" />
     <Content Include="Views\Report\Stock.cshtml" />
-    <Content Include="Views\Report\Sales.cshtml" />
-    <Content Include="Views\Report\Receivings.cshtml" />
     <Content Include="Views\Report\FilterSales.cshtml" />
+    <Content Include="Views\Report\Receivings.cshtml" />
+    <Content Include="Views\Report\RefreshSales.cshtml" />
     <Content Include="Views\Report\FilterReceivings.cshtml" />
     <Content Include="Views\Report\FilterVat.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
