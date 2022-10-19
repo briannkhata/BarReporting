@@ -15,21 +15,21 @@
                 <br>
                 <div class="row">
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">From Date</label>
-                            <input type="date" class="form-control" name="FromDate" />
+                            <input type="date" class="form-control" name="FromDate" required />
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">To Date</label>
-                            <input type="date" class="form-control" name="ToDate" />
+                            <input type="date" class="form-control" name="ToDate" required />
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label">Payment Types</label>
                             <select class="form-control" name="PaymentTypeId">
@@ -65,6 +65,15 @@
                                     <option value="@item.UserId">@item.Name</option>
                                 }
                             </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">
+                                VAT Only
+                                <input type="checkbox" class="form-control" />
+                            </label>
                         </div>
                     </div>
 
