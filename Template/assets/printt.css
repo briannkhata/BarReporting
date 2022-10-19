@@ -1,0 +1,188 @@
+body{
+  font-family:sans-serif;
+
+}
+#receipt_wrapper 
+{
+	/*background-color:#FFFFFF;*/
+	font-size:75%;
+}
+
+.b4 
+{
+	margin-top:-2%;
+}
+.btn-group
+{
+	display:none;
+}
+
+
+.dataTables_info
+{
+	display:none;
+}
+.copy_layout{
+	display: none;
+}
+
+.hiddenTD
+{
+	display:none;
+}
+table{
+  border:none;
+}
+table a{
+display:none;
+}
+
+.navbar-default.sidebar{
+
+	border:none;
+
+
+}
+hr{
+ size:2px;
+
+}
+
+table td a {
+	display: none;
+}
+
+table#SalaryList
+{
+ border:none;
+}
+
+#receipt_items td
+{
+	white-space:nowrap;
+}
+
+/* Hide links in table for printing */
+table.innertable
+{
+	display: table;
+}
+
+table.innertable a 
+{
+	color: #000000;
+	text-decoration: none;	
+}
+
+table.report a.expand 
+{
+	visibility: hidden;
+}
+
+table.report a 
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+.print_show 
+{
+	display:block !important; 
+}
+
+.print_hide
+{
+	display:none !important;
+}
+.st
+{
+	display:none !important;
+}
+#payslipsDIV{
+  margin-top:10%;
+}
+
+.uu{
+
+}
+.uuu{
+
+
+
+}
+.nn{
+
+
+
+}
+.nnn{
+
+
+
+}
+.n{
+
+}
+.mm{
+background:#ded9ea; 
+border-radius:3px; 
+}
+.fet{
+padding-top:0%;
+}
+.afta{
+ padding-top:0%;
+}
+.b4{
+ padding-top:0%;
+}
+.page-container{
+ border:1px solid;
+ border-radius:3px;
+ font-size:12px;
+ width:800px;
+
+}
+
+label{
+		
+		 padding: 0.3%;
+		 font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		 font-size:13px;
+		 margin-left:10%;
+		  margin-top:0.2%;;	
+		 background-color:#FFF; 
+		}
+		
+		 .labela{	
+		 padding: 0.3%;
+		 font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		 font-size:18px;
+		 margin-left:10%;
+		 margin-top:0.2%;;
+		 background-color:#FFF; 
+		}
+		 .paramuu{
+		 width:40%;
+		 padding: 0.3%;
+		 font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		 font-size:18px;
+		 margin-left:10%;
+		  margin-top:0.2%;;
+		 border-radius:3px;
+		 border:1px solid #CCF;
+		 background-color:#FFF; 
+		}
+		table{
+		 font-family:monospace;
+		 font-size:10px;
+		}
+			 p{
+		 padding: 0.3%;
+		 font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		 font-size:12px;
+		 margin-left:10%;
+		 margin-top:0.2%;;
+		 border-radius:3px;	
+		 color:green;
+		}

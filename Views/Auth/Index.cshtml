@@ -1,0 +1,119 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Reporting Tool</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="~/Template/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Template/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Template/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Template/assets/admin/pages/css/login-soft.css" rel="stylesheet" type="text/css" />
+    <link href="~/Template/assets/global/css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="~/Template/assets/global/css/plugins-md.css" rel="stylesheet" type="text/css" />
+    <link href="~/Template/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css" />
+    <link id="style_color" href="~/Template/assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css" />
+    <link href="~/Template/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="~/Template/assets/logo.png">
+</head>
+<body class="page-md login">
+    <div class="logo">
+        <h1 class="text-primary"></h1>
+    </div>
+    <div class="menu-toggler sidebar-toggler">
+    </div>
+    <div class="content">
+        <!-- BEGIN LOGIN FORM -->
+        <form class="login-form" action="@Url.Action("Login")" method="post">
+
+            <div style="margin-bottom:3%;">
+               Reportin Tool
+            </div>
+            <br><br><br><br>
+
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <div class="input-icon">
+                    <b style="color:white;">Username</b>
+                    <i class="fa fa-user"></i>
+                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <div class="input-icon">
+                    <b style="color:white;">Password</b>
+                    <i class="fa fa-lock"></i>
+                    <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" />
+                </div>
+            </div>
+            <div class="form-actions">
+                <label class="checkbox">
+                    <button type="submit" class="btn blue pull-left">
+                        Login <i class="m-icon-swapright m-icon-white"></i>
+                    </button>
+                </label>
+            </div>
+            <p>
+                @if (TempData["userErrorMsg"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        @TempData["userErrorMsg"]
+                    </div>
+
+                    <hr />
+
+                    @TempData["userErrorMsg"]
+
+                }
+            </p>
+        </form>
+        <!-- END LOGIN FORM -->
+    </div>
+
+
+
+    <div class="copyright">
+        &copy; Powered by <strong style="colorQQ:blue;">Sata Technologies Ltd</strong>
+    </div>
+    <script src="~/Template/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Template/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="~/Template/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Template/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="~/Template/assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+    <script src="~/Template/assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/Template/assets/global/scripts/metronic.js" type="text/javascript"></script>
+    <script src="~/Template/assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+    <script src="~/Template/assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+    <script src="~/Template/assets/admin/pages/scripts/login-soft.js" type="text/javascript"></script>
+    <script>
+        jQuery(document).ready(function () {
+            Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout
+            Login.init();
+            Demo.init();
+            // init background slide images
+            $.backstretch([
+                "~/Template/assets/admin/pages/media/bg/1.jpg",
+                "~/Template/assets/admin/pages/media/bg/2.jpg",
+                "~/Template/assets/admin/pages/media/bg/3.jpg",
+                "~/Template/assets/admin/pages/media/bg/4.jpg"
+            ], {
+                fade: 1000,
+                duration: 8000
+            }
+            );
+        });
+
+        $(".alert").delay(5000).fadeOut(200, function () {
+            $(this).alert('close');
+        });
+    </script>
+</body>
+</html>

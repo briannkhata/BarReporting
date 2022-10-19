@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a35ff5b8a9d45199518ad10948e7b62" Name="Diagram1">
+        <EntityTypeShape EntityType="BModel.BillPayment" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BModel.Branch" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BModel.Brand" Width="1.5" PointX="0.75" PointY="2" />
+        <EntityTypeShape EntityType="BModel.Category" Width="1.5" PointX="0.75" PointY="6.125" />
+        <EntityTypeShape EntityType="BModel.Expens" Width="1.5" PointX="10" PointY="0.875" />
+        <EntityTypeShape EntityType="BModel.ExpenseType" Width="1.5" PointX="7.75" PointY="1" />
+        <EntityTypeShape EntityType="BModel.FoodMenu" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BModel.Income" Width="1.5" PointX="7" PointY="5.875" />
+        <EntityTypeShape EntityType="BModel.IncomeType" Width="1.5" PointX="4.75" PointY="6" />
+        <EntityTypeShape EntityType="BModel.Ingredient" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="BModel.PaymentType" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BModel.Product" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="BModel.ReceivingDetail" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BModel.Receiving" Width="1.5" PointX="10.75" PointY="7.75" />
+        <EntityTypeShape EntityType="BModel.SaleDetail" Width="1.5" PointX="5.25" PointY="1.25" />
+        <EntityTypeShape EntityType="BModel.Sale" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BModel.Shift" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BModel.Shop" Width="1.5" PointX="4.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BModel.StockMovement" Width="1.5" PointX="6.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BModel.Stock" Width="1.5" PointX="8.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BModel.Unit" Width="1.5" PointX="10.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BModel.User" Width="1.5" PointX="12.75" PointY="7.75" />
+        <EntityTypeShape EntityType="BModel.FoodBill" Width="1.5" PointX="12.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BModel.FoodBillsDetail" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BModel.vwBranch" Width="1.5" PointX="13.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BModel.vwBrand" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="BModel.vwCategory" Width="1.5" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="BModel.vwCustomer" Width="1.5" PointX="14.75" PointY="13.75" />
+        <EntityTypeShape EntityType="BModel.vwExpens" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BModel.vwExpenseType" Width="1.5" PointX="15.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BModel.vwFoodMenu" Width="1.5" PointX="4.75" PointY="15.75" />
+        <EntityTypeShape EntityType="BModel.vwIncome" Width="1.5" PointX="6.75" PointY="15.75" />
+        <EntityTypeShape EntityType="BModel.vwIncomType" Width="1.5" PointX="8.75" PointY="15.75" />
+        <EntityTypeShape EntityType="BModel.vwOrderCustomer" Width="1.5" PointX="0.75" PointY="16.75" />
+        <EntityTypeShape EntityType="BModel.vwPaymentType" Width="1.5" PointX="16.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BModel.vwProduct" Width="1.5" PointX="16.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BModel.vwReceipt" Width="1.5" PointX="10.75" PointY="16.75" />
+        <EntityTypeShape EntityType="BModel.vwReceivingCart" Width="1.5" PointX="12.75" PointY="16.75" />
+        <EntityTypeShape EntityType="BModel.vwReceivingReport" Width="1.5" PointX="16.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BModel.vwSalesReport" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BModel.vwShift" Width="1.5" PointX="2.75" PointY="18.75" />
+        <EntityTypeShape EntityType="BModel.vwShop" Width="1.5" PointX="4.75" PointY="18.75" />
+        <EntityTypeShape EntityType="BModel.vwSReport" Width="1.5" PointX="18.75" PointY="5.75" />
+        <EntityTypeShape EntityType="BModel.vwStockReport" Width="1.5" PointX="6.75" PointY="18.75" />
+        <EntityTypeShape EntityType="BModel.vwStock" Width="1.5" PointX="18.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BModel.vwUnit" Width="1.5" PointX="18.75" PointY="13.75" />
+        <EntityTypeShape EntityType="BModel.vwUpdateStock" Width="1.5" PointX="18.75" PointY="16.75" />
+        <EntityTypeShape EntityType="BModel.vwUser" Width="1.5" PointX="19.75" PointY="0.75" />
+        <AssociationConnector Association="BModel.FK_Products_Brands" />
+        <AssociationConnector Association="BModel.FK_Products_Categories" />
+        <AssociationConnector Association="BModel.FK_Expenses_ExpenseTypes" />
+        <AssociationConnector Association="BModel.FK_Incomes_IncomeTypes" />
+        <AssociationConnector Association="BModel.FK_Ingredients_Ingredients" />
+        <AssociationConnector Association="BModel.FK_SaleDetails_Products" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

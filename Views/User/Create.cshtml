@@ -1,0 +1,59 @@
+﻿@model BiselaWeb.Models.UserModel
+
+@{
+    ViewBag.Title = "Create User";
+}
+
+<div class="portlet box grey" style="border:1px solid #E5E5E5;">
+    <div class="portlet-title">
+        <div class="caption">
+            @ViewBag.Title
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <form action="@Url.Action("Create","User")" method="post" class="horizontal-form">
+            <div class="form-body">
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <input type="text" name="Name" class="form-control" value="@Model.Name" required>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">User Name</label>
+                            <input type="text" name="UserName" class="form-control" value="@Model.UserName" required>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Phone</label>
+                            <input type="tel" name="Phone" class="form-control" value="@Model.Phone" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            <input type="email" name="Email" class="form-control" value="@Model.Email" required>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-actions left">
+                <input type="hidden" name="id" value="@Model.UserId">
+                <button type="submit" class="btn default blue-stripe"> Save</button>
+            </div>
+        </form>
+    </div>
+</div>

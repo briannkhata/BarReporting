@@ -1,0 +1,132 @@
+#receipt_wrapper 
+{
+	/*background-color:#FFFFFF;*/
+	font-size:100%;
+}
+
+.dataTables_paginate 
+{
+	display:none;
+}
+.btn-group,.btn,.form-control
+{
+	display:none;
+}
+.dataTables_length
+{
+	display:none;
+}
+.dataTables_filter
+{
+	display:none;
+}
+
+.dataTables_info
+{
+	display:none;
+}
+.copy_layout{
+	display: none;
+}
+
+.hiddenTD
+{
+	display:none;
+}
+
+#hedd{
+    margin-top: 3%;
+    margin-bottom: -5%;
+}
+
+
+
+.nop,.form-control,.nav-tabs,hr{
+
+
+	display: none;
+}
+.navbar-default.sidebar{
+
+	border:none;
+
+
+}
+.form-inline
+{
+	display:none;
+}
+table td a {
+	display: none;
+}
+
+table
+{
+ border:none;
+}
+table#t1
+{
+	float:right;
+	margin-top:-10%;
+}
+
+.aziz {
+display:none;
+}
+
+#receipt_items td
+{
+	white-space:nowrap;
+}
+
+/* Hide links in table for printing */
+table.innertable
+{
+	display: table;
+}
+
+table.innertable a 
+{
+	color: #000000;
+	text-decoration: none;	
+}
+
+table.report a.expand 
+{
+	visibility: hidden;
+}
+
+table.report a 
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+table.innertable thead 
+{
+	/*display:none;*/ 
+}
+
+.print_show 
+{
+	display:block !important; 
+}
+
+.print_hide
+{
+	display:none !important;
+}
+.st
+{
+	display:none !important;
+}
+#payslipsDIV{
+  margin-top:10%;
+
+
+
+}
+.hed{
+     display : block !important;
+   
+}
