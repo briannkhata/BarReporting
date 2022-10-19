@@ -35,12 +35,6 @@ namespace BiselaWeb.Controllers
             }
             return View();
         }
-
-        public ActionResult Receivings()
-        {
-            return View();
-        }
-
         public ActionResult RefreshSales()
         {
             DateTime FromDate = DateTime.Parse(Request.Form["FromDate"]);
@@ -59,6 +53,11 @@ namespace BiselaWeb.Controllers
 
         public ActionResult FilterReceivings()
         {
+            return View();
+        }
+
+        public ActionResult RefreshReceivings()
+        {
             DateTime FromDate = DateTime.Parse(Request.Form["FromDate"]);
             DateTime ToDate = DateTime.Parse(Request.Form["ToDate"]);
             ViewBag.Title = "Receivings For | " + FromDate.ToString("dd/M/yyyy") + " To " + ToDate.ToString("dd/M/yyyy");
@@ -74,7 +73,6 @@ namespace BiselaWeb.Controllers
             DateTime FromDate = DateTime.Parse(Request.Form["FromDate"]);
             DateTime ToDate = DateTime.Parse(Request.Form["ToDate"]);
            
-
             ViewBag.Title = "VAT For | " + FromDate.ToString("dd/M/yyyy") + " To " + ToDate.ToString("dd/M/yyyy");
             using (db = new BEntities())
             {
