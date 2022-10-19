@@ -91,5 +91,14 @@ namespace BiselaWeb.Controllers
             }
             return View();
         }
+
+        public ActionResult FilterExpenses()
+        {
+            using (db = new BEntities())
+            {
+                ViewBag.expenseTypes = db.vwExpenseTypes.ToList();
+            }
+            return View();
+        }
     }
 }
