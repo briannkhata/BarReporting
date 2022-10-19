@@ -29,5 +29,7 @@ namespace BarReporting.Data
         public Nullable<int> PaymentTypeId { get; set; }
         public Nullable<int> SoldBy { get; set; }
         public Nullable<int> ShopId { get; set; }
+        public int UserId { get; set; }
+        public int Expr1 { get; set; }
     }
 }

@@ -288,6 +288,9 @@ warning 6002: The table/view 'bisela.dbo.FoodBillsDetails' does not have a prima
           <Property Name="SellingPrice" Type="float" />
           <Property Name="Comment" Type="varchar(max)" />
           <Property Name="OrderPrice" Type="float" />
+          <Property Name="MoveFrom" Type="int" />
+          <Property Name="MoveTo" Type="int" />
+          <Property Name="Destination" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Units">
           <Key>
@@ -554,6 +557,8 @@ warning 6002: The table/view 'bisela.dbo.vwSalesReport' does not have a primary 
             <PropertyRef Name="TaxValue" />
             <PropertyRef Name="SoldPrice" />
             <PropertyRef Name="DateSold" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="Expr1" />
           </Key>
           <Property Name="ProductCode" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ProductName" Type="varchar" MaxLength="50" Nullable="false" />
@@ -570,6 +575,8 @@ warning 6002: The table/view 'bisela.dbo.vwSalesReport' does not have a primary 
           <Property Name="PaymentTypeId" Type="int" />
           <Property Name="SoldBy" Type="int" />
           <Property Name="ShopId" Type="int" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Expr1" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'bisela.dbo.vwShifts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1000,7 +1007,9 @@ warning 6002: The table/view 'bisela.dbo.vwUsers' does not have a primary key de
     [vwSalesReport].[SaleType] AS [SaleType], 
     [vwSalesReport].[PaymentTypeId] AS [PaymentTypeId], 
     [vwSalesReport].[SoldBy] AS [SoldBy], 
-    [vwSalesReport].[ShopId] AS [ShopId]
+    [vwSalesReport].[ShopId] AS [ShopId], 
+    [vwSalesReport].[UserId] AS [UserId], 
+    [vwSalesReport].[Expr1] AS [Expr1]
     FROM [dbo].[vwSalesReport] AS [vwSalesReport]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vwShifts" EntityType="Self.vwShifts" store:Type="Views" store:Schema="dbo">
@@ -1447,6 +1456,9 @@ warning 6002: The table/view 'bisela.dbo.vwUsers' does not have a primary key de
           <Property Name="SellingPrice" Type="Double" />
           <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="OrderPrice" Type="Double" />
+          <Property Name="MoveFrom" Type="Int32" />
+          <Property Name="MoveTo" Type="Int32" />
+          <Property Name="Destination" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Unit">
           <Key>
@@ -1727,6 +1739,8 @@ warning 6002: The table/view 'bisela.dbo.vwUsers' does not have a primary key de
             <PropertyRef Name="TaxValue" />
             <PropertyRef Name="SoldPrice" />
             <PropertyRef Name="DateSold" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="Expr1" />
           </Key>
           <Property Name="ProductCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -1743,6 +1757,8 @@ warning 6002: The table/view 'bisela.dbo.vwUsers' does not have a primary key de
           <Property Name="PaymentTypeId" Type="Int32" />
           <Property Name="SoldBy" Type="Int32" />
           <Property Name="ShopId" Type="Int32" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Expr1" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="vwShift">
           <Key>
@@ -2187,6 +2203,9 @@ warning 6002: The table/view 'bisela.dbo.vwUsers' does not have a primary key de
           <EntitySetMapping Name="Stocks">
             <EntityTypeMapping TypeName="BModel.Stock">
               <MappingFragment StoreEntitySet="Stocks">
+                <ScalarProperty Name="Destination" ColumnName="Destination" />
+                <ScalarProperty Name="MoveTo" ColumnName="MoveTo" />
+                <ScalarProperty Name="MoveFrom" ColumnName="MoveFrom" />
                 <ScalarProperty Name="OrderPrice" ColumnName="OrderPrice" />
                 <ScalarProperty Name="Comment" ColumnName="Comment" />
                 <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
@@ -2441,6 +2460,8 @@ warning 6002: The table/view 'bisela.dbo.vwUsers' does not have a primary key de
           <EntitySetMapping Name="vwSalesReports">
             <EntityTypeMapping TypeName="BModel.vwSalesReport">
               <MappingFragment StoreEntitySet="vwSalesReport">
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="ShopId" ColumnName="ShopId" />
                 <ScalarProperty Name="SoldBy" ColumnName="SoldBy" />
                 <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
