@@ -364,6 +364,7 @@
     <Content Include="Views\Report\RefreshExpenses.cshtml" />
     <Content Include="Views\Report\RefreshReceivings.cshtml" />
     <Content Include="Views\Report\ExpiringProducts.cshtml" />
+    <Content Include="Views\Report\ExpiredProducts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
