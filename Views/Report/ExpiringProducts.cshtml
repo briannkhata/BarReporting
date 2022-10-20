@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Stock Report";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet box grey" style="border:1px solid #E5E5E5;">
+            <div class="portlet-title">
+                <div class="caption">
+                    @ViewBag.Title
+                </div>
+            </div>
+            <div class="portlet-body">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Product Code</th>
+                            <th>Product Name</th>
+                            <th>Description</th>
+                            <th>Brand</th>
+                            <th>Category</th>
+                            <th>Shop Qty</th>
+                            <th>Kitchen Qty</th>
+                            <th>Stores Qty</th>
+                            <th>Expiry Date</th>
+                            <th>Selling Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.expiring)
+                        {
+                            <tr>
+                                <td>
+                                    @item.ProductCode<br />
+                                    @item.UnitName |  @item.Qty
+                                </td>
+                                <td>@item.ProductName</td>
+                                <td>@item.Description</td>
+                                <td>@item.CategoryName</td>
+                                <td>@item.BrandName</td>
+                                <td>@item.Shop</td>
+                                <td>@item.Kitchen</td>
+                                <td>@item.Stores</td>
+                                <td>@item.ExpiryDate.ToString("dddd, dd MMMM yyyy")</td>
+                                <td>@string.Format("{0:C}", item.SellingPrice).Trim('$')</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

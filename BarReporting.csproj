@@ -363,6 +363,7 @@
     <Content Include="Views\Report\RefreshIncomes.cshtml" />
     <Content Include="Views\Report\RefreshExpenses.cshtml" />
     <Content Include="Views\Report\RefreshReceivings.cshtml" />
+    <Content Include="Views\Report\ExpiringProducts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

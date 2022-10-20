@@ -146,5 +146,29 @@ namespace BiselaWeb.Controllers
             }
             return View();
         }
+
+        public ActionResult ExpiredProducts()
+        {
+            var today = DateTime.Now;
+            using (db = new BEntities())
+            {
+                ViewBag.Title = "Expired Products";
+                ViewBag.expired = db.vwStockReports.Where(x => x.ExpiryDate > today).ToList();
+            }
+            return View();
+        }
+
+        public ActionResult ExpiringProducts()
+        {
+            using (db = new BEntities())
+            {
+                double ExpiryAlert = (double)db.Shops.SingleOrDefault().ExpiryAlert;
+                var expiryDate = DateTime.Now.AddDays(ExpiryAlert);
+
+                ViewBag.Title = "Expiring Products";
+                ViewBag.expiring = db.vwStockReports.Where(x => x.ExpiryDate <= expiryDate).ToList();
+            }
+            return View();
+        }
     }
 }
