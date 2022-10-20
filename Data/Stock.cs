@@ -24,8 +24,5 @@ namespace BarReporting.Data
         public Nullable<double> SellingPrice { get; set; }
         public string Comment { get; set; }
         public Nullable<double> OrderPrice { get; set; }
-        public Nullable<int> MoveFrom { get; set; }
-        public Nullable<int> MoveTo { get; set; }
-        public string Destination { get; set; }
     }
 }

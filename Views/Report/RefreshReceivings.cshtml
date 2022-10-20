@@ -16,39 +16,39 @@
                             <th>Product Name</th>
                             <th>Brand</th>
                             <th>Category</th>
-                            <th>Selling Price</th>
-                            <th>Discount</th>
+                            <th>Order Price</th>
                             <th>Qty</th>
                             <th>Tax</th>
                             <th>Total</th>
-                            <th>Sale Date</th>
+                            <th>PO</th>
+                            <th>Comment</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
                         @{
-                            var spTotal = 0;
-                            var sdTotal = 0;
+                            var opTotal = 0;
+                            var tpTotal = 0;
                             var txTotal = 0;
-                            var dsTotal = 0;
 
-                            foreach (var item in ViewBag.Sales)
+                            foreach (var item in ViewBag.receivings)
                             {
-                                spTotal += item.SellingPrice;
-                                sdTotal += item.SoldPrice;
-                                txTotal += item.TaxValue;
-                                dsTotal += item.Discount;
+                                opTotal += item.OrderPrice;
+                                tpTotal += item.TotalPrice;
+                                txTotal += item.Vat;
 
                                 <tr>
                                     <td>@item.ProductCode</td>
                                     <td>@item.ProductName</td>
-                                    <td>@item.CategoryName</td>
                                     <td>@item.BrandName</td>
-                                    <td>@string.Format("{0:C}", item.SellingPrice).Trim('$')</td>
-                                    <td>@string.Format("{0:C}", item.Discount).Trim('$')</td>
+                                    <td>@item.CategoryName</td>
+                                    <td>@string.Format("{0:C}", item.OrderPrice).Trim('$')</td>
                                     <td>@item.Qty</td>
-                                    <td>@string.Format("{0:C}", item.TaxValue).Trim('$')</td>
-                                    <td>@string.Format("{0:C}", item.SoldPrice).Trim('$')</td>
-                                    <td>@item.DateSold.ToString("dd/M/yyyy")</td>
+                                    <td>@string.Format("{0:C}", item.Vat).Trim('$')</td>
+                                    <td>@string.Format("{0:C}", item.TotalPrice).Trim('$')</td>
+                                    <td>@item.PurchasingOrder</td>
+                                    <td>@item.Comment</td>
+                                    <td>@item.ReceivingDate.ToString("dd MM yyyy")</td>
                                 </tr>
                             }
                         }
@@ -56,10 +56,12 @@
                     <tfoot>
                         <tr>
                             <td colspan="4"></td>
-                            <td>@string.Format("{0:C}", spTotal).Trim('$')</td>
-                            <td>@string.Format("{0:C}", dsTotal).Trim('$')</td>
+                            <td>@string.Format("{0:C}", opTotal).Trim('$')</td>
+                            <td></td>
                             <td>@string.Format("{0:C}", txTotal).Trim('$')</td>
-                            <td>@string.Format("{0:C}", sdTotal).Trim('$')</td>
+                            <td>@string.Format("{0:C}", tpTotal).Trim('$')</td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                         </tr>
                     </tfoot>

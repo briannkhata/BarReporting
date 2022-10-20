@@ -27,5 +27,8 @@ namespace BarReporting.Data
         public string PurchasingOrder { get; set; }
         public Nullable<System.DateTime> DeliveryDate { get; set; }
         public string DeliveryNote { get; set; }
+        public Nullable<int> From { get; set; }
+        public string Comment { get; set; }
+        public Nullable<double> Vat { get; set; }
     }
 }

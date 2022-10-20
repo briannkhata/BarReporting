@@ -351,19 +351,18 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Auth\Index.cshtml" />
-    <Content Include="Views\Report\Vat.cshtml" />
     <Content Include="Views\Report\Stock.cshtml" />
     <Content Include="Views\Report\FilterSales.cshtml" />
     <Content Include="Views\Report\Receivings.cshtml" />
     <Content Include="Views\Report\RefreshSales.cshtml" />
     <Content Include="Views\Report\FilterReceivings.cshtml" />
-    <Content Include="Views\Report\FilterVat.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\Report\FilterIncomes.cshtml" />
     <Content Include="Views\Report\FilterExpenses.cshtml" />
     <Content Include="Views\Report\RefreshIncomes.cshtml" />
     <Content Include="Views\Report\RefreshExpenses.cshtml" />
+    <Content Include="Views\Report\RefreshReceivings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

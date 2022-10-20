@@ -24,5 +24,8 @@ namespace BarReporting.Data
         public Nullable<double> Stores { get; set; }
         public Nullable<System.DateTime> ExpiryDate { get; set; }
         public Nullable<double> SellingPrice { get; set; }
+        public Nullable<double> Kitchen { get; set; }
+        public string UnitName { get; set; }
+        public string Qty { get; set; }
     }
 }

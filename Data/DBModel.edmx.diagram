@@ -24,7 +24,6 @@
         <EntityTypeShape EntityType="BModel.Shift" Width="1.5" PointX="11.75" PointY="3.75" />
         <EntityTypeShape EntityType="BModel.Shop" Width="1.5" PointX="4.75" PointY="11.75" />
         <EntityTypeShape EntityType="BModel.StockMovement" Width="1.5" PointX="6.75" PointY="11.75" />
-        <EntityTypeShape EntityType="BModel.Stock" Width="1.5" PointX="8.75" PointY="11.75" />
         <EntityTypeShape EntityType="BModel.Unit" Width="1.5" PointX="10.75" PointY="11.75" />
         <EntityTypeShape EntityType="BModel.User" Width="1.5" PointX="12.75" PointY="7.75" />
         <EntityTypeShape EntityType="BModel.FoodBill" Width="1.5" PointX="12.75" PointY="11.75" />
@@ -59,6 +58,7 @@
         <AssociationConnector Association="BModel.FK_Incomes_IncomeTypes" />
         <AssociationConnector Association="BModel.FK_Ingredients_Ingredients" />
         <AssociationConnector Association="BModel.FK_SaleDetails_Products" />
+        <EntityTypeShape EntityType="BModel.Stock" Width="1.5" PointX="15.375" PointY="19.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

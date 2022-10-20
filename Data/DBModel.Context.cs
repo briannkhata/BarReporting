@@ -44,7 +44,6 @@ namespace BarReporting.Data
         public virtual DbSet<Shift> Shifts { get; set; }
         public virtual DbSet<Shop> Shops { get; set; }
         public virtual DbSet<StockMovement> StockMovements { get; set; }
-        public virtual DbSet<Stock> Stocks { get; set; }
         public virtual DbSet<Unit> Units { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<FoodBill> FoodBills { get; set; }
@@ -73,5 +72,6 @@ namespace BarReporting.Data
         public virtual DbSet<vwUnit> vwUnits { get; set; }
         public virtual DbSet<vwUpdateStock> vwUpdateStocks { get; set; }
         public virtual DbSet<vwUser> vwUsers { get; set; }
+        public virtual DbSet<Stock> Stocks { get; set; }
     }
 }
