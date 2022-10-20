@@ -153,7 +153,7 @@ namespace BiselaWeb.Controllers
             using (db = new BEntities())
             {
                 ViewBag.Title = "Expired Products";
-                ViewBag.expired = db.vwStockReports.Where(x => x.ExpiryDate > today).ToList();
+                ViewBag.expired = db.vwStockReports.Where(x => x.ExpiryDate < today).ToList();
             }
             return View();
         }
@@ -163,7 +163,7 @@ namespace BiselaWeb.Controllers
             using (db = new BEntities())
             {
                 double ExpiryAlert = (double)db.Shops.SingleOrDefault().ExpiryAlert;
-                var expiryDate = DateTime.Now.AddDays(ExpiryAlert);
+                var expiryDate = DateTime.Now.AddDays(-ExpiryAlert);
 
                 ViewBag.Title = "Expiring Products";
                 ViewBag.expiring = db.vwStockReports.Where(x => x.ExpiryDate <= expiryDate).ToList();
